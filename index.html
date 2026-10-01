@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moda Urbana | Loja de Roupas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho / Menu -->
+    <header>
+        <div class="logo">MODA URBANA</div>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Coleções</a>
+            <a href="#">Novidades</a>
+            <a href="#">Contato</a>
+        </nav>
+        <div class="carrinho-icone" onclick="toggleCarrinho()">
+            🛒 <span id="contador-carrinho">0</span>
+        </div>
+    </header>
+
+    <!-- Banner Principal -->
+    <section class="banner">
+        <div class="banner-conteudo">
+            <h1>Coleção de Primavera 2026</h1>
+            <p>Renove seu guarda-roupa com as últimas tendências urbanas.</p>
+            <a href="#produtos" class="btn-banner">Ver Produtos</a>
+        </div>
+    </section>
+
+    <!-- Vitrine de Produtos -->
+    <main id="produtos">
+        <h2>Destaques da Semana</h2>
+        <div class="grade-produtos">
+            
+            <!-- Produto 1 -->
+            <div class="produto-card">
+                <div class="produto-imagem">
+                    <img src="https://unsplash.com" alt="Camiseta Minimalista">
+                </div>
+                <h3>Camiseta Minimalista Preta</h3>
+                <p class="preco">R$ 89,90</p>
+                <button onclick="adicionarAoCarrinho('Camiseta Minimalista Preta', 89.90)">Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="produto-card">
+                <div class="produto-imagem">
+                    <img src="https://unsplash.com" alt="Calça Jeans Slim">
+                </div>
+                <h3>Calça Jeans Slim Fit</h3>
+                <p class="preco">R$ 179,90</p>
+                <button onclick="adicionarAoCarrinho('Calça Jeans Slim Fit', 179.90)">Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="produto-card">
+                <div class="produto-imagem">
+                    <img src="https://unsplash.com" alt="Jaqueta Casual">
+                </div>
+                <h3>Jaqueta Casual Premium</h3>
+                <p class="preco">R$ 249,90</p>
+                <button onclick="adicionarAoCarrinho('Jaqueta Casual Premium', 249.90)">Adicionar ao Carrinho</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Painel Lateral do Carrinho (Invisível por padrão) -->
+    <div id="carrinho-aba" class="carrinho-aba">
+        <div class="carrinho-header">
+            <h3>Seu Carrinho</h3>
+            <span class="fechar-carrinho" onclick="toggleCarrinho()">&times;</span>
+        </div>
+        <div id="itens-carrinho">
+            <!-- Os itens adicionados vão aparecer aqui via JS -->
+            <p style="text-align: center; color: #777;">Seu carrinho está vazio.</p>
+        </div>
+        <div class="carrinho-total">
+            <span>Total:</span>
+            <span id="valor-total">R$ 0,00</span>
+        </div>
+        <button class="btn-finalizar" onclick="alert('Pedido simulado com sucesso!')">Finalizar Compra</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
